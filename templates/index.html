@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+My Sounds
+{% endblock %}
+
+{% block main %}
+
+<div class="register-form">
+  <div class="form animated fadeInDown">
+      <div class="row">
+          <div class="col-sm-12 note mb-4 z-depth-3" style="background: -webkit-linear-gradient(left, #000000, #EB5757);">
+              <h3 class="hyeon-font mt-4">Your sounds.</h3>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container table table-responsive sound-table">
+<table class="table table-borderless">
+  <thead>
+    <tr class="d-flex">
+      <th class="col-6" scope="col"><h4>Sound</h4></th>
+      <th class="col-3" scope="col"><h4>Download</h4></th>
+      <th class="col-3" scope="col"><h4>Remove</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for row in rows %}
+    <tr class="d-flex mx-auto justify-content-center">
+      <td class="col-md-6 my-auto scaled">
+        <iframe class="z-depth-2" style="width:491px; height:97px; border: 5px solid black; border-radius:1.5rem;" src="https://freesound.org/embed/sound/iframe/{{row['sound_id']}}/simple/medium/" style="border:0px #000000 solid;" name="preview" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="86px" width="481px" allowfullscreen></iframe>
+      </td>
+      <td class="col-md-3 my-auto"><a href="https://freesound.org/apiv2/sounds/{{row['sound_id']}}/download"><button class="btnSubmit btnSubmitted waves-effect long-button-regular z-depth-3"><span>Download</span></button></a></td>
+      <td class="col-md-3 my-auto"><button id="{{row['sound_id']}}" type="submit" class="btnSubmit btnSubmitted waves-effect long-button z-depth-3 removal"><span>Delete</span></button></td>
+    </tr>
+   {% endfor %}
+  </tbody>
+</table>
+
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 mb-5">
+      <a href="{{ url_for('index')}}" ><button type="submit" class="long-button longer-button btnSubmit waves-effect z-depth-2 mt-4" onclick="postJsonDeletion()">Delete selected sounds</button></a>
+    </div>
+  </div>
+</div>
+
+{% block script %}
+<script>
+
+  //stackoverflow.com/questions/6985507
+  //reloads page after loading to show updated 'My Sounds' list
+  function reloadIt() {
+    if (window.location.href.substr(-2) !== "?r") {
+        window.location = window.location.href + "?r";
+    }
+}
+
+setTimeout('reloadIt()', 10)();
+</script>
+{% endblock %}
+
+{% endblock %}

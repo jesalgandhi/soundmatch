@@ -1,0 +1,198 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.bg-light {
+    background: linear-gradient(#FF512F, #DD2476) !important;
+}
+
+.nav-link {
+    color:white !important;
+}
+
+.nav-link:hover {
+    background-color: black;
+    border-radius:1.5rem;
+}
+
+.nav-link:focus {
+    background: -webkit-linear-gradient(#11998e, #38ef7d);
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+
+.sizer {
+  width: 375px;
+  height: 30px;
+}
+
+
+.table-responsive {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.col-md-1 {
+    width: 375px;
+    height: 30px;
+}
+
+
+/* css snippet from here: https://bootsnipp.com/snippets/GaEOX */
+.note
+{
+    text-align: center;
+    height: 100px;
+    width: 1000px;
+    background: -webkit-linear-gradient(left, #000000, #0f9b0f);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+    border-radius:1.5rem;
+}
+.form-content
+{
+    padding: 5%;
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+}
+.form-control{
+    border-radius:1.5rem;
+    text-align:center;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 22%;
+    cursor: pointer;
+    background: black;
+    color: #fff;
+}
+
+.btnSubmit:hover {
+    background: -webkit-linear-gradient(right, #1A2980, #26D0CE);
+}
+
+body {
+font-family: 'Hind', sans-serif;
+}
+
+.hyeon-font {
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.page-header {
+    background: linear-gradient(#FF512F, #DD2476);
+}
+
+.container-fluid{
+   padding: 0;
+}
+
+.navbar {
+}
+
+.selector {
+  background-image: linear-gradient(#FF512F, #DD2476) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;  /* <- here it is */
+  box-shadow: none;
+
+}
+
+body{
+    padding-bottom:200px;
+}
+
+.embed-responsive-481by86 {
+  padding-bottom: 17.88%;
+}
+
+.long-button {
+    width:150px;
+    height:50px;
+}
+
+.long-button-regular {
+    width:150px;
+    height:50px;
+}
+
+.removal:focus {
+    background: -webkit-linear-gradient(#ED213A, #93291E) !important;
+}
+
+.removal:disabled {
+    background: -webkit-linear-gradient(#ED213A, #93291E) !important;
+}
+
+.longer-button {
+    background:linear-gradient(#AA076B, #61045F);
+    width:332.5px !important;
+    height:63px !important;
+}
+
+.sound-table {
+    padding-right:120px !important;
+}
+
+::-moz-selection { background: #f44345; }
+::selection { background: #f44345; }
+
+.btnSubmit:disabled {
+    background: -webkit-linear-gradient(#11998e, #38ef7d);
+}
+
+.btnSubmit:focus {
+    background: -webkit-linear-gradient(#11998e, #38ef7d);
+}
+
+.scaled {
+    transform: scale(0.85);
+}

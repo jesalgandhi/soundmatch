@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control animated fadeInLeft z-depth-2" name="username" placeholder="Username" type="text" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control animated fadeInLeft z-depth-2" name="password" placeholder="Password" type="password" required>
+        </div>
+        <div class="form-group">
+            <input class="form-control animated fadeInLeft z-depth-2" name="confirmation" placeholder="Confirm Password" type="password" required>
+        </div>
+        <button class="btnSubmit animated fadeInUp z-depth-3" type="submit">Register</button>
+    </form>
+{% endblock %}

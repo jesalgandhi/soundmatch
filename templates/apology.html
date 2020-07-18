@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+<!--Brand spankin new error page, other one was too cringe (Sorry, David, had to be said :p)-->
+{% block main %}
+
+    {% if top == 404 %}
+
+        <!--https://github.com/idindrakusuma/simple-404-template/blob/master/404.html-->
+        <div class="container">
+            <h2 class="hyeon-font mt-2">404 Error</h2>
+            <img width="500" height="500" class="img-fluid" src="/static/errorpage/404.png" />
+            <br/>
+            <h4>The page you are looking for was not found.
+                <br />It could be because the url is incorrect or not available.</h4>
+            <br/>
+            <!--teal pill button design from here: http://themes.startbootstrap.com/sb-ui-kit-pro/-->
+            <a class="btn btn-teal btn-marketing rounded-pill lift lift-sm" href="{{ url_for('homepage') }}">Go Home<i class="fas fa-arrow-right ml-1"></i></a>
+        </div>
+
+    {% elif top == "You have no sounds!" %}
+        <!--https://github.com/idindrakusuma/simple-404-template/blob/master/404.html-->
+        <div class="container">
+            <h2 class="hyeon-font mt-2">{{ top }}</h2>
+            <img width="500" height="500" class="img-fluid" src="/static/errorpage/search.png" />
+            <br/>
+            <h4>{{ bottom }}</h4>
+            <!--teal pill button design from here: http://themes.startbootstrap.com/sb-ui-kit-pro/-->
+            <a class="btn btn-teal btn-marketing rounded-pill lift lift-sm" href="{{ url_for('search') }}">Search</a>
+        </div>
+
+
+    {% else %}
+        <div class="container">
+            <h2 class="hyeon-font mt-2">{{ top }} Error</h2>
+            <img width="500" height="500" class="img-fluid" src="/static/errorpage/other_error.png" />
+            <br/>
+            <h4>{{ bottom }}</h4>
+            <!--teal pill button design from here: http://themes.startbootstrap.com/sb-ui-kit-pro/-->
+            <a class="btn btn-teal btn-marketing rounded-pill lift lift-sm" href="javascript:history.back()"><i class="fas fa-arrow-left mr-1"></i>Go Back</a>
+        </div>
+
+
+    {% endif %}
+{% endblock %}

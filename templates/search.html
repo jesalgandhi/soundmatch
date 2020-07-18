@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Search
+{% endblock %}
+
+{% block main %}
+
+<!-- HTML snippet from here: https://bootsnipp.com/snippets/GaEOX -->
+
+<form action="/search" method="post">
+<div class="container register-form">
+
+    <div class="form animated fadeInDown">
+
+        <div class="row">
+            <div class="col-md-12 note z-depth-3 justify-content-center" style="display: flex; align-items: center;">
+                <h3 style="font-size:25px;" class="hyeon-font mt-2">Search for a word or phrase to find new sounds, and choose your desired amount of results</h3>
+            </div>
+        </div>
+
+    <div class="row mt-4 mb-4">
+        <div class="col-md-12">
+                <div class="form-group mb-4">
+                    <input type="select" class="form-control z-depth-2" name="word" placeholder="Word/Phrase" required autofocus>
+                </div>
+                <div class="form-group mb-4">
+
+                  <select id="numResults" name="numResults" class="form-control z-depth-2" required>
+                    <option value="5" selected>Few</option>
+                    <option value="10">Some</option>
+                    <option value="15">Many</option>
+                  </select>
+                  <span class="ml-2" data-toggle='tooltip' title="'Few' results outputs less sounds at a faster rate (~25),
+                  'Some' results outputs an average amount of sounds at a moderate rate (~50), and
+                  'Many' results outputs many more sounds at a slower rate (~75)">
+                  <i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                </div>
+                <button type="submit" class="btnSubmit waves-effect z-depth-2">Search</button>
+        </div>
+    </div>
+    </div>
+
+</div>
+</form>
+
+{% endblock %}

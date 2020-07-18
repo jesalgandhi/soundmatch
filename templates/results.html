@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Results
+{% endblock %}
+
+{% block main %}
+
+<div class="register-form">
+  <div class="form animated fadeInDown">
+      <div class="row">
+          <div class="col-sm-12 note mb-4 z-depth-3" style="background: -webkit-linear-gradient(left, #000000, #EB5757);">
+              <h3 class="hyeon-font mt-4">Your custom sounds, catered to you.</h3>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container table table-responsive sound-table">
+<table class="table table-borderless">
+  <thead>
+    <tr class="d-flex">
+      <th class="col-9" scope="col"><h4>Sound</h4></th>
+      <th class="col-3" scope="col"><h4>Add to My Sounds</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for id in id_list %}
+    <tr class="d-flex mx-auto justify-content-center">
+      <td class="col-md-9 my-auto">
+        <iframe class="z-depth-2" style="width:491px; height:97px; border: 5px solid black; border-radius:1.5rem;" src="https://freesound.org/embed/sound/iframe/{{id}}/simple/medium/" style="border:0px #000000 solid;" name="preview" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="86px" width="481px" allowfullscreen></iframe>
+      </td>
+      <td class="col-md-3 my-auto"><button id="{{id}}" type="submit" class="btnSubmit btnSubmitted waves-effect long-button z-depth-3"><span>Add</span></button></td>
+    </tr>
+   {% endfor %}
+  </tbody>
+</table>
+
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 mb-5">
+      <a href="{{ url_for('index')}}" ><button id="saveSounds" type="submit" class="long-button longer-button btnSubmit waves-effect z-depth-2 mt-4" onclick="postJson()">Save my sounds</button></a>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
