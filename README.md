@@ -1,5 +1,6 @@
 # soundmatch
-Flask-based webapp created for final CS50 project, that helps you find a broader range of free sounds at ease.
+### What is it?
+A Flask-based webapp created for my final CS50 project, that helps you find a broader range of free sounds at ease.
 
 ### How does it work?
 Soundmatch works by taking an inputted word from a user, such as 'hammer' or 'explosion' for example, and passes it though the <a href="https://www.datamuse.com/api/">Datamuse API</a>. Using the 'Means like constraint' provided by Datamuse, synonyms of this word are then found. The amount of synonyms (and subsequent matching sound results) are determined by whether the user picks 'Less', 'More', or 'Most' when inputting. 
@@ -11,9 +12,6 @@ You can then click "Add to My Sounds" on any desired sound(s), and after saving 
 
 ### Why?
 Although freesound offers a wide array of both amateur and professional sounds, I found that their search function rarely returns what I am looking for. I also realized that, oftentimes, when searching for a specific or particular sound, I cannot find it because it is indexed under a different name. Therefore, with soundmatch, I hope to bridge the gap between what sounds a user is looking for by showing them not only sounds from their particular search, but also related sounds. Think of it sort of like a <a href="https://en.wikipedia.org/wiki/Approximate_string_matching">fuzzy search</a>.
-
-### Screenshots
-
 
 ### Instructions to run locally
 To do this, start by clonining or downloading this project. 
@@ -32,6 +30,14 @@ flask run
 ```
 
 The server should now be up and running, and a localized link will tell you where it is running. Try out the site and have fun! Run the command `CTRL+C` to exit out of the flask app.
+
+### Screenshots
+![homepage](/screenshots/homepage.png)
+![register](/screenshots/register.png)
+![results](/screenshots/results.png)
+![results2](/screenshots/results2.png)
+![search](/screenshots/search.png)
+![yoursounds](/screenshots/yoursounds.png)
 
 ### Demo
 Unfortunately, to host this project to Heroku, I need to convert my cs50 sql instances to SQLAlchemy instances instead, and it will take some time to learn this new technology. If there is enough interest/I get extra time, I will try my best to host this website for all to try :)
